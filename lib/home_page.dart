@@ -24,6 +24,12 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
+
+    /*24 is for notification bar on Android*/
+    final double itemHeight = (size.height - kToolbarHeight - 24) / 2;
+    final double itemWidth = size.width / 1;
+
     return Scaffold(
       appBar: AppBar(title: Text('Mobigic Test'),),
       body: SafeArea(
@@ -148,6 +154,7 @@ class _HomePageState extends State<HomePage> {
                     crossAxisSpacing: 3,
                     mainAxisSpacing: 3,
                     crossAxisCount: _n ?? 0,
+                    childAspectRatio: (itemWidth / itemHeight),
                   ),
                   itemBuilder: (context, index) {
                     return Center(
