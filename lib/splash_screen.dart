@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:get/instance_manager.dart';
+import 'package:mobigic_test_flutter/app/home/view/home_page_v2.dart';
 import 'package:mobigic_test_flutter/home_page.dart';
 import 'package:get/get.dart';
 
@@ -18,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     Timer(
         Duration(seconds: 3),
-        () => Get.to(() => HomePage()),
+        () => Get.to(() => HomePageV2()),
       );
   }
 

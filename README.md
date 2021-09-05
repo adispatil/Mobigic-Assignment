@@ -1,6 +1,6 @@
-# mobigic_test_flutter
+# Mobigic Test Flutter
 
-A new Flutter project.
+Test for flutter developer position by Mobigic
 
 ## Getting Started
 

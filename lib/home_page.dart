@@ -125,7 +125,7 @@ class _HomePageState extends State<HomePage> {
                 padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
                 child: Flexible(
                   child: TextField(
-                    maxLength: 1,
+                    maxLength: (_m??0) * (_n??0),
                     textCapitalization: TextCapitalization.characters,
                     onChanged: (value) {
                       setState(() {

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobigic_test_flutter/home_page.dart';
+import 'package:mobigic_test_flutter/home_page_controller.dart';
 import 'package:mobigic_test_flutter/splash_screen.dart';
 import 'package:get/get.dart';
 
