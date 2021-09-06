@@ -14,20 +14,18 @@ class UserInputTextWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Flexible(
-      child: Obx(
-        () => TextField(
-          maxLength: _mHomePageController.getMaxLengthForInput() ?? 1,
-          textCapitalization: TextCapitalization.characters,
-          onChanged: (value) {
-            _mHomePageController.userInputText.value = value;
-          },
-          keyboardType: TextInputType.text,
-          decoration: InputDecoration(
-            border: OutlineInputBorder(),
-            labelText: kTxtEnterCharactersForMatrix,
-            hintText: kTxtEnterCharactersForMatrix,
-          ),
+    return Obx(
+      () => TextField(
+        maxLength: _mHomePageController.getMaxLengthForInput() ?? 1,
+        textCapitalization: TextCapitalization.characters,
+        onChanged: (value) {
+          _mHomePageController.userInputText.value = value;
+        },
+        keyboardType: TextInputType.text,
+        decoration: InputDecoration(
+          border: OutlineInputBorder(),
+          labelText: kTxtEnterCharactersForMatrix,
+          hintText: kTxtEnterCharactersForMatrix,
         ),
       ),
     );

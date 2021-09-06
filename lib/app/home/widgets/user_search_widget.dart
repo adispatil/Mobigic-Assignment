@@ -13,23 +13,24 @@ class UserSearchWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Flexible(
-      child: TextField(
-            maxLength: 1,//_mHomePageController.getMaxLengthForInput() ?? 1,
-            textCapitalization: TextCapitalization.characters,
-            onChanged: (value) {
-              _mHomePageController.searchInput.value = value;
-            },
-            obscureText: false,
-            keyboardType: TextInputType.text,
-            decoration: InputDecoration(
-              prefixIcon: Icon(Icons.search),
-              border: OutlineInputBorder(),
-              labelText: kTxtSearchForCharacterFromMatrix,
-              hintText: kTxtSearchForCharacterFromMatrix,
-            ),
-          
-      ),
+    return TextField(
+          maxLength: 1,//_mHomePageController.getMaxLengthForInput() ?? 1,
+          textCapitalization: TextCapitalization.characters,
+          onChanged: (value) {
+            _mHomePageController.searchInput.value = value;
+            if(_mHomePageController.searchInput.value.isNotEmpty) {
+              FocusScope.of(context).unfocus();
+            }
+          },
+          obscureText: false,
+          keyboardType: TextInputType.text,
+          decoration: InputDecoration(
+            prefixIcon: Icon(Icons.search),
+            border: OutlineInputBorder(),
+            labelText: kTxtSearchForCharacterFromMatrix,
+            hintText: kTxtSearchForCharacterFromMatrix,
+          ),
+
     );
   }
 }

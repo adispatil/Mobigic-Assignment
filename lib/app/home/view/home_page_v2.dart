@@ -103,61 +103,59 @@ class HomePageV2 extends StatelessWidget {
                         ? true
                         : false,
                     child: Obx(
-                      () => Expanded(
-                        child: GridView.builder(
-                          shrinkWrap: true,
-                          physics: NeverScrollableScrollPhysics(),
-                          itemCount:
-                              _mHomePageController.getMaxLengthForInput(),
-                          gridDelegate:
-                              SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisSpacing: 3,
-                            mainAxisSpacing: 3,
-                            crossAxisCount:
-                                _mHomePageController.columnCount.value == 0
-                                    ? 1
-                                    : _mHomePageController.columnCount.value,
-                            childAspectRatio:
-                                _mHomePageController.getChildAspectRatio(
-                                    Get.size.width,
-                                    Get.size.height,
-                                    kToolbarHeight),
-                          ),
-                          itemBuilder: (context, index) {
-                            return Center(
-                              child: Obx(
-                                () => Container(
-                                  width: double.infinity,
-                                  height: double.infinity,
-                                  decoration: BoxDecoration(
-                                    color: _mHomePageController
-                                                .getCharacter(index) ==
-                                            _mHomePageController
-                                                .searchInput.value
-                                        ? Colors.lightBlueAccent
-                                        : Colors.white,
-                                    shape: BoxShape.rectangle,
-                                    borderRadius: BorderRadius.circular(5.0),
-                                    border:
-                                        Border.all(color: Colors.blueAccent),
-                                  ),
-                                  child: Center(
-                                    child: Obx(
-                                      () => Text(
-                                        _mHomePageController
-                                            .getCharacter(index),
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 30.0,
-                                        ),
+                      () => GridView.builder(
+                        shrinkWrap: true,
+                        physics: NeverScrollableScrollPhysics(),
+                        itemCount:
+                            _mHomePageController.getMaxLengthForInput(),
+                        gridDelegate:
+                            SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisSpacing: 3,
+                          mainAxisSpacing: 3,
+                          crossAxisCount:
+                              _mHomePageController.columnCount.value == 0
+                                  ? 1
+                                  : _mHomePageController.columnCount.value,
+                          childAspectRatio:
+                              _mHomePageController.getChildAspectRatio(
+                                  Get.size.width,
+                                  Get.size.height,
+                                  kToolbarHeight),
+                        ),
+                        itemBuilder: (context, index) {
+                          return Center(
+                            child: Obx(
+                              () => Container(
+                                width: double.infinity,
+                                height: double.infinity,
+                                decoration: BoxDecoration(
+                                  color: _mHomePageController
+                                              .getCharacter(index) ==
+                                          _mHomePageController
+                                              .searchInput.value
+                                      ? Colors.lightBlueAccent
+                                      : Colors.white,
+                                  shape: BoxShape.rectangle,
+                                  borderRadius: BorderRadius.circular(5.0),
+                                  border:
+                                      Border.all(color: Colors.blueAccent),
+                                ),
+                                child: Center(
+                                  child: Obx(
+                                    () => Text(
+                                      _mHomePageController
+                                          .getCharacter(index),
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 30.0,
                                       ),
                                     ),
                                   ),
                                 ),
                               ),
-                            );
-                          },
-                        ),
+                            ),
+                          );
+                        },
                       ),
                     ),
                   ),
