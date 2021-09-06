@@ -8,6 +8,8 @@ Key features
 3. MVC
 4. Reactive Programming
 
+##### You can download apk file from [here](https://github.com/adispatil/Mobigic-Assignment/blob/master/build/app/outputs/apk/release/app-release.apk)
+
 #### Screenshots of app as below captured on iPhone 11
 <p float="left">
   <img src="https://user-images.githubusercontent.com/34621423/132134196-0cdf795b-ec2b-4fde-918e-f86fad876f93.png" width="200" height="433" hspace="20"/>
