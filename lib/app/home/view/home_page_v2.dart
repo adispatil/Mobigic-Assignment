@@ -130,9 +130,7 @@ class HomePageV2 extends StatelessWidget {
                                 height: double.infinity,
                                 decoration: BoxDecoration(
                                   color: _mHomePageController
-                                              .getCharacter(index) ==
-                                          _mHomePageController
-                                              .searchInput.value
+                                              .getIsHighlightSearchedCell(index)
                                       ? Colors.lightBlueAccent
                                       : Colors.white,
                                   shape: BoxShape.rectangle,

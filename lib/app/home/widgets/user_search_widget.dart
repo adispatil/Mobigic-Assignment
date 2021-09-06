@@ -14,12 +14,13 @@ class UserSearchWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
-          maxLength: 1,//_mHomePageController.getMaxLengthForInput() ?? 1,
+          maxLength: _mHomePageController.getMaxLengthForInput() ?? 1,
           textCapitalization: TextCapitalization.characters,
           onChanged: (value) {
             _mHomePageController.searchInput.value = value;
             if(_mHomePageController.searchInput.value.isNotEmpty) {
               FocusScope.of(context).unfocus();
+              _mHomePageController.getSearchedValuePosition();
             }
           },
           obscureText: false,
